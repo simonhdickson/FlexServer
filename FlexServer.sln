@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{E7461252-7D17-4B86-BA9C-D37019920F17}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FlexServer", "FlexServer\FlexServer.fsproj", "{1053C8C1-2F06-4868-AD03-21311B8AF3EC}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FlexServer.Tests", "FlexServer.Tests\FlexServer.Tests.fsproj", "{3C88B1EA-5ED8-46A7-B4FE-F2C2A2081E5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1053C8C1-2F06-4868-AD03-21311B8AF3EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1053C8C1-2F06-4868-AD03-21311B8AF3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1053C8C1-2F06-4868-AD03-21311B8AF3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1053C8C1-2F06-4868-AD03-21311B8AF3EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C88B1EA-5ED8-46A7-B4FE-F2C2A2081E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C88B1EA-5ED8-46A7-B4FE-F2C2A2081E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C88B1EA-5ED8-46A7-B4FE-F2C2A2081E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C88B1EA-5ED8-46A7-B4FE-F2C2A2081E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
