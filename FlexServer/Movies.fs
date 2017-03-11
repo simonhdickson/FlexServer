@@ -11,8 +11,11 @@ open Suave.Writers
 open Newtonsoft.Json
 open Suave.Sockets.Control
 open SuaveExtensions
+open FSharp.Data
 
-let folder = """D:\Content\Video\Movies"""
+type Settings = JsonProvider<"settings.json">
+let settings = Settings.Load("settings.json")
+let folder = settings.MoviesFolder.[0]
 
 let write status dto : WebPart =
     status (JsonConvert.SerializeObject dto) >=> setMimeType "application/json; charset=utf-8"
@@ -36,7 +39,7 @@ let page = sprintf """<head>
 </head>
 
 <body>
-  <video id="my-video" class="video-js" controls preload="auto" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+  <video id="my-video" class="afterglow" controls preload="auto" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
     <source src="%s" type='video/mp4'>
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -44,7 +47,7 @@ let page = sprintf """<head>
     </p>
   </video>
 
-  <script src="http://vjs.zencdn.net/5.17.0/video.js"></script>
+  <script src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
 </body>"""
 
 let webPart : WebPart<HttpContext> =

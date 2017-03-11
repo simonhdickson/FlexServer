@@ -1,4 +1,5 @@
-﻿open Suave
+﻿open FSharp.Data
+open Suave
 open Suave.Operators
 open Suave.Writers
 
