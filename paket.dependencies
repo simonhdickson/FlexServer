@@ -6,3 +6,5 @@ nuget Newtonsoft.Json
 nuget xunit
 nuget FsCheck.Xunit
 nuget FSharp.Data
+nuget Neo4jClient
+nuget TMDbLib
