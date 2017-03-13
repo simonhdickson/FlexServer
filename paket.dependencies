@@ -1,10 +1,21 @@
-source https://api.nuget.org/v3/index.json
-framework >= net462
+source https://nuget.org/api/v2
 
+nuget FSharp.Core prerelease redirects: force
 nuget Suave
-nuget Newtonsoft.Json
-nuget xunit
-nuget FsCheck.Xunit
-nuget FSharp.Data
-nuget Neo4jClient
-nuget TMDbLib
+nuget Microsoft.Extensions.Logging.Console
+nuget System.Net.NetworkInformation
+nuget Newtonsoft.Json prerelease
+nuget jose-jwt
+
+group Test
+  source https://nuget.org/api/v2
+  framework >= net45
+  nuget FSharp.Core redirects: force
+  nuget Canopy
+  nuget Expecto
+  nuget phantomjs
+
+group Build
+  source https://nuget.org/api/v2
+  
+  nuget FAKE
